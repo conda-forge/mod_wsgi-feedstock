@@ -1,5 +1,5 @@
 {% set name = "mod_wsgi" %}
-{% set version = "4.7.1" %}
+{% set version = "4.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eaeadc28d06ea42fa565c02b83504074ac558fca27f059e12bc5684d660e3cce
+  sha256: 1f1a22511e7700c7d4d26b14768937c919ae5f53e80f5352226a218d866156ec
 
 build:
   skip: true  # [win]
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0 
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mod_wsgi-express = mod_wsgi.server:main
 
@@ -30,9 +30,9 @@ test:
     - mod_wsgi
 
 about:
-  home: https://modwsgi.readthedocs.io/en/develop/ 
+  home: https://modwsgi.readthedocs.io/en/developi/
   license: Apache-2.0
-  license_family: "APACHE"
+  license_family: APACHE
   license_file: LICENSE
   summary: Apache module that implements a WSGI compliant interface for hosting Python based web applications
 
