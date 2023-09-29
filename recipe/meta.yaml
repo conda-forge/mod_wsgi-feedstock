@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mod_wsgi-express = mod_wsgi.server:main
