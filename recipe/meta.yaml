@@ -1,5 +1,5 @@
 {% set name = "mod_wsgi" %}
-{% set version = "4.9.4" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8e762662ea5b01afc386bbcfbaa079748eb6203ab1d6d3a3dac9237f5666cfc9
+  sha256: 81fa192494410f2a4760818a7bfd7fa65826158d08af6726ec6a1b3d0ee18b3a
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mod_wsgi-express = mod_wsgi.server:main
