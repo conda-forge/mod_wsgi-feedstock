@@ -205,4 +205,5 @@ Feedstock Maintainers
 =====================
 
 * [@ReimarBauer](https://github.com/ReimarBauer/)
+* [@akrherz](https://github.com/akrherz/)
 
