@@ -1,5 +1,5 @@
 {% set name = "mod_wsgi" %}
-{% set version = "6.0.3" %}
+{% set version = "6.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a73a541f4ebbd203a75f94025b59d6a0632f4ab7b5503ae49fc621d58482d7d3
+  sha256: fe22e669b66f798c5f7c84b93688d185ef4d70db979daf8ad5e6e85df3815532
 
 build:
   skip: true  # [win]
