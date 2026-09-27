@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mod_wsgi
-  version: "6.0.6"
+  version: "6.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 897f58ee961be7dcfe527074dd64d43d18ca108cf919d4c3bcf10fa6a4c12921
+  sha256: 9ebb645c899ea6461edf27872c11a6a12c6e819edbcc3652e0b6195d990aa31c
 
 build:
-  number: 2
+  number: 0
   skip: win
   script: ${{ PYTHON }} -m pip install . -vv
   python:
